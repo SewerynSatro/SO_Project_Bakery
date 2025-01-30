@@ -97,7 +97,7 @@ void manager(int msqid_cashier[3])
             }
         }
 
-        if ((rand() % 100000000000)==-1) {
+        if ((rand() % 100000000000)==1) {
             if (sem_wait(&sh->store_open_lock)==-1) {
                 perror("sem_wait");
                 exit(EXIT_FAILURE);
